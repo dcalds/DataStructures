@@ -76,4 +76,14 @@ class LinkedList(object):
         while actualNode is not None:
             print('%s' % actualNode.info)
             actualNode = actualNode.next
-    
+            
+    # Creat a list
+    def create(self):
+        n = int(input("Enter the number of elements: "))
+
+        if n == 0:
+            return
+        else:
+            for i in range(1, n+1):
+                info = int(input("Enter with a new element: "))
+                self.insertEnd(info)
