@@ -31,7 +31,7 @@ def main():
         print("6. Count Fast")
         print("7. Sair")
 
-        chose = int(input("Escolha uma opção: "))
+        chose = int(input("Choose an Option: "))
 
         if chose == 7:
             break
