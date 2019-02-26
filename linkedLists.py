@@ -13,7 +13,8 @@ class LinkedList(object):
         self.length = 0
 
     # Insert pointing to the start node [O(1)]
-    def insertStart(self, info):
+    def insertStart(self):
+        info = int(input("Insert in Start: "))
         newNode = Node(info)
 
         if not self.start:
@@ -25,7 +26,8 @@ class LinkedList(object):
         self.length += 1
 
     # Insert pointing to the None state [O(n)]
-    def insertEnd(self, info):
+    def insertEnd(self):
+        info = int(input("Insert in End: "))
         newNode = Node(info)
         actualNode = self.start
 
@@ -36,8 +38,8 @@ class LinkedList(object):
         self.length += 1
 
     # Remove node with same info [O(n)]
-    def remove(self, info):
-
+    def remove(self):
+        info = int(input("Remove some node: "))
         if self.start is None:
             return
 
@@ -76,7 +78,7 @@ class LinkedList(object):
         while actualNode is not None:
             print('%s' % actualNode.info)
             actualNode = actualNode.next
-            
+
     # Creat a list
     def create(self):
         n = int(input("Enter the number of elements: "))
@@ -85,5 +87,6 @@ class LinkedList(object):
             return
         else:
             for i in range(1, n+1):
-                info = int(input("Enter with a new element: "))
-                self.insertEnd(info)
+                self.insertStart()
+
+
